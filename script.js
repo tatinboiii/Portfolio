@@ -2,7 +2,7 @@
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
-// Mobile navigation menu
+
 menuToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("open");
 
@@ -10,7 +10,7 @@ menuToggle.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Close the menu after clicking a navigation link
+
 document.querySelectorAll("#navLinks a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
@@ -19,6 +19,6 @@ document.querySelectorAll("#navLinks a").forEach((link) => {
   });
 });
 
-// Automatically update the copyright year
+
 document.getElementById("year").textContent =
   new Date().getFullYear();
